@@ -47,6 +47,8 @@ def main():
 						term_count[item]=1
     for termKey in term_score.keys():
        temp_score=float(term_score[termKey])/float(term_count[termKey])
+       termKey=termKey.replace('\t','')
+       termKey=termKey.replace(' ','')
        print termKey,"\t",temp_score
 		
 #print "Total is :",total_per_line
